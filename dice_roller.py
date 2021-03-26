@@ -9,7 +9,12 @@ def main(dice_rolls):
     for i in range(dice_rolls):
         roll = random.randint(1, 6)
         dice_sum += roll
-        print(f'You rolled a die {roll}')
+        if roll == 1:
+            print(f'You rolled a {roll} critical failure')
+        elif 1 < roll < 6:
+            print(f'You rolled a {roll}')
+        else:
+            print(f'You rolled a {roll} critical success')
     print(" You have rolled a total of {}".format(dice_sum))
 
 
